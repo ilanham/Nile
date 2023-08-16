@@ -1,0 +1,17 @@
+﻿<Window x:Class="Nile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nile - Grow and Shrink Strings" Height="400" Width="424">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#FF414141"/>
+        </Grid.Background>
+        <TextBox AcceptsReturn="True" Height="267" HorizontalAlignment="Left" Margin="12,0,0,60" Name="inputTextBox" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="185" TextChanged="inputTextBox_TextChanged" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+        <TextBox AcceptsReturn="True" Height="267" HorizontalAlignment="Left" Margin="209,0,0,60" Name="outputTextBox" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="185" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+        <Label Content="Input" Height="28" HorizontalAlignment="Left" Margin="12,0,0,0" Name="inputLabel" VerticalAlignment="Top" Foreground="GhostWhite" />
+        <Label Content="Output" Height="28" HorizontalAlignment="Left" Margin="209,0,0,0" Name="outputLabel" VerticalAlignment="Top" Foreground="GhostWhite" />
+        <CheckBox Content="Add Parentheses" Height="16" HorizontalAlignment="Left" Margin="12,307,0,0" Name="addParensCheckBox" VerticalAlignment="Top" Foreground="GhostWhite" />
+        <CheckBox Content="Add Quotes" Height="16" HorizontalAlignment="Left" Margin="209,307,0,0" Name="addQuotesCheckBox" VerticalAlignment="Top" Foreground="GhostWhite" />
+        <CheckBox Content="Add Unicode" Height="16" HorizontalAlignment="Left" Margin="209,327,0,0" x:Name="addUnicodeCheckBox" VerticalAlignment="Top" Foreground="GhostWhite" IsEnabled="{Binding IsChecked, ElementName=addQuotesCheckBox}" Visibility="Hidden" />
+    </Grid>
+</Window>
